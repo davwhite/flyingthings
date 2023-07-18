@@ -35,7 +35,7 @@ RUN pip install -U "micropipenv[toml]"
 WORKDIR /workspace
 
 # Copy files
-COPY source/ubi9/Pipfile.lock ./
+COPY Pipfile.lock ./
 
 # Install packages and cleanup
 # (all commands are chained to minimize layer size)
