@@ -40,6 +40,7 @@ spec:
               name: training-data
             - mountPath: /dev/shm
               name: dshm
+          resources: {}
       volumes:
         - name: training-data
           persistentVolumeClaim:
