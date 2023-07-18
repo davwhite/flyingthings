@@ -40,7 +40,7 @@ spec:
       description: dockerfile path 
       type: string
     - name: MODEL_DOCKERFILE
-      default: source/model
+      default: components/demo/containers/model
       description: dockerfile path 
       type: string
     - name: UBI_DOCKERFILE
