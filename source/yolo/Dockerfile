@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir ultralytics==8.0.124
 
 WORKDIR /workspace
 
-COPY source/yolo/requirements.txt ./
+COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r ./requirements.txt
 
