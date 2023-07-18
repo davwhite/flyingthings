@@ -27,8 +27,7 @@ spec:
     spec:
       containers:
         - name: container
-          image: >-
-            image-registry.openshift-image-registry.svc:5000/flyingthings-standalone/yolo-notebook:latest
+          image: yolo:latest
           # envFrom:
           #   - configMapRef:
           #       name: flyingthings-configmap
