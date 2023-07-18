@@ -36,7 +36,7 @@ spec:
       description: model server image
       type: string
     - name: YOLO_DOCKERFILE
-      default: source/yolo
+      default: components/demo/containers/yolo
       description: dockerfile path 
       type: string
     - name: MODEL_DOCKERFILE
@@ -44,7 +44,7 @@ spec:
       description: dockerfile path 
       type: string
     - name: UBI_DOCKERFILE
-      default: source/ubi9
+      default: components/demo/containers/ubi9
       description: dockerfile path 
       type: string
     - name: MINIMAL_DOCKERFILE
