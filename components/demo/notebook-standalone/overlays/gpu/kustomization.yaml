@@ -15,6 +15,10 @@ patches:
         value:
           nvidia.com/gpu.deploy.driver: 'true'
       - op: replace
+        path: /spec/template/spec/containers/0/resources/limits
+        value:
+          nvidia.com/gpu: 1
+      - op: replace
         path: /spec/template/spec/containers/0/resources/requests
         value:
           nvidia.com/gpu: 1
