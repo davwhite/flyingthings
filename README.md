@@ -1,10 +1,13 @@
-# flyingthings
+# Computers can see flying things
+
 Computer vision demo
 
-# Getting Started
+## Getting Started
 
 ## Quick Start
-The `bootstrap` directory contains scripts to create all the assets for the project. 
+
+The `bootstrap` directory contains scripts to create all the assets for the project.
+
 ```
 cd bootstrap
 flyingthings-standalone
@@ -13,6 +16,7 @@ flyingthings-standalone
 ./05-deploy-notebooks.sh
 ./10-run-model-a-training.sh
 ```
+
 ## Notebooks
 
 ## Minio
