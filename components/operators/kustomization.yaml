@@ -5,4 +5,4 @@ resources:
 - devspaces/aggregate/overlays/default
 - gpu-operator-certified/aggregate/overlays/default
 - nfd/aggregate/overlays/default
-- openshift-pipelines-operator/overlays/latest
+- openshift-pipelines-operator-rh/overlays/latest
