@@ -14,7 +14,7 @@ spec:
       type: string
   steps:
     - name: export-model
-      image: image-registry.openshift-image-registry.svc:5000/$(params.ocp-tablespace)/yolo:latest
+      image: image-registry.openshift-image-registry.svc:5000/$(params.ocp-tablespace)/custom-model:latest
       script: |
         set -x \
         && $(workspaces.source.path)/source/training/export-model.sh \
