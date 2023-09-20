@@ -24,7 +24,7 @@ spec:
       type: string
   steps:
     - name: get-pretrained-model
-      image: image-registry.openshift-image-registry.svc:5000/$(params.ocp-tablespace)/yolo:latest
+      image: image-registry.openshift-image-registry.svc:5000/$(params.ocp-tablespace)/custom-model:latest
       script: |
         set -x \
         && cd $(params.SIMPLEVIS_DATA)/workspace \

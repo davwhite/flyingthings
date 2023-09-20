@@ -10,8 +10,8 @@ TABLESPACE=$1
 
 oc new-project $TABLESPACE
 
-oc create -f ../pipelines/tasks
-oc create -f ../pipelines/manifests
+oc apply -f ../pipelines/tasks
+oc apply -f ../pipelines/manifests
 
 
 # Exit the script gracefully

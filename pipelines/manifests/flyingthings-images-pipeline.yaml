@@ -152,24 +152,24 @@ spec:
       workspaces:
         - name: workspace
           workspace: shared-workspace
-    - name: build-yolo
-      params:
-        - name: IMAGE
-          value: $(params.YOLO_IMAGE)
-        - name: DOCKERFILE_PATH
-          value: $(params.YOLO_DOCKERFILE)          
-        - name: DOCKERFILE
-          value: $(workspaces.path)/$(params.YOLO_DOCKERFILE)/Dockerfile
-        - name: YOLO_BUILD_ARGS
-          value: "$(params.YOLO_BUILD_ARGS)"
-      runAfter:
-        - see-stuff
-      taskRef:
-        kind: ClusterTask
-        name: buildah
-      workspaces:
-        - name: source
-          workspace: source
+    # - name: build-yolo
+    #   params:
+    #     - name: IMAGE
+    #       value: $(params.YOLO_IMAGE)
+    #     - name: DOCKERFILE_PATH
+    #       value: $(params.YOLO_DOCKERFILE)          
+    #     - name: DOCKERFILE
+    #       value: $(workspaces.path)/$(params.YOLO_DOCKERFILE)/Dockerfile
+    #     - name: YOLO_BUILD_ARGS
+    #       value: "$(params.YOLO_BUILD_ARGS)"
+    #   runAfter:
+    #     - see-stuff
+    #   taskRef:
+    #     kind: ClusterTask
+    #     name: buildah
+    #   workspaces:
+    #     - name: source
+    #       workspace: source
     - name: build-ubi9
       params:
         - name: IMAGE
@@ -327,7 +327,7 @@ spec:
         - name: ocp-tablespace
           value: $(params.ocp-tablespace)
       runAfter:
-        - build-yolo
+        - build-model-server
       workspaces:
         - name: source
           workspace: source
@@ -344,7 +344,7 @@ spec:
         - name: BUILD_EXTRA_ARGS
           value: "$(params.MODEL_BUILD_ARGS)"
       runAfter:
-        - get-pretrained
+        - see-stuff
       taskRef:
         kind: ClusterTask
         name: buildah
