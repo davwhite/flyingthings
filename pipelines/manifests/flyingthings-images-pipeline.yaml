@@ -418,7 +418,7 @@ spec:
         - name: source
           workspace: source
       runAfter:
-        - build-model-server
+        - get-pretrained
       params:
       - name: ocp-tablespace
         value: $(params.ocp-tablespace)
